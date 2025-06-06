@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Secret</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fff5f5;
+            color: #5e3a3a;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-image: url('https://i.imgur.com/7Qa8B0x.png');
+            background-repeat: repeat;
+            background-size: 200px;
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f8c8d0;
+            margin-top: 40px;
+        }
+        
+        h1 {
+            color: #d35d6e;
+            font-size: 28px;
+            margin-bottom: 25px;
+            font-weight: normal;
+        }
+        
+        .heart {
+            color: #d35d6e;
+            font-size: 24px;
+            margin: 0 5px;
+        }
+        
+        #protected-content {
+            display: none;
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: rgba(255, 248, 248, 0.9);
+            border: 1px dashed #d35d6e;
+            text-align: left;
+            line-height: 1.6;
+            animation: fadeIn 1.5s;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        #access-form {
+            margin: 30px 0;
+        }
+        
+        input[type="password"] {
+            padding: 12px;
+            width: 200px;
+            border: 1px solid #f8c8d0;
+            border-radius: 20px;
+            background-color: #fffafa;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            background-color: #d35d6e;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            font-size: 16px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #b74d5d;
+            transform: scale(1.05);
+        }
+        
+        .error {
+            color: #d35d6e;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        .flowers {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #d35d6e;
+        }
+        
+        .signature {
+            font-style: italic;
+            text-align: right;
+            margin-top: 20px;
+            color: #d35d6e;
+        }
+        
+        .message-section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            color: #d35d6e;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .section-content {
+            padding-left: 15px;
+            border-left: 2px solid #f8c8d0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flowers">✿ ❀ ✿</div>
+        <h1>Message <span class="heart">♥</span> Secret</h1>
+        <p>Ce message n'est destiné qu'à tes yeux...</p>
+        
+        <div id="access-form">
+            <p>Entre le surnom que tu m'avais attribué :</p>
+            <input type="password" id="access-code" placeholder="Notre mot spécial">
+            <br>
+            <button onclick="checkAccess()">Ouvrir le message</button>
+            <p id="error-message" class="error"></p>
+        </div>
+        
+        <div id="protected-content">
+            <div class="flowers">✿ ❁ ✿</div>
+            <h2>J'ai pas eu le courage de t'envoyer ce message, du coup je préfère que tu le reçoives de cette façon</h2>
+            
+            <div class="message-section">
+                <div class="section-title">✧ Introduction</div>
+                <div class="section-content">
+                    <p>Je voulais te dire...</p>
+                    <p><strong>𝑴𝒊𝒄𝒌𝒆𝒚</strong>, je suis tombé amoureux de toi bien avant de t'avoir embrassée, bien avant même de toucher ta peau. Tout a commencé cette nuit où nous avons parlé, parce que j'ai senti que tu étais ma personne.</p>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <div class="section-title">✧ Mes regrets et mes erreurs</div>
+                <div class="section-content">
+                    <p>Depuis ce jour, tu n'as pas su à quel point je t'ai aimée, malgré toutes les bêtises que j'ai faites. J'ai trop voulu jouer le charo, le mec qui s'en fout, le bad boy... et maintenant, tout ça me rattrape.</p>
+                    <ul>
+                        <li>J'ai été influencé par de mauvaises fréquences (Heyvrad).</li>
+                        <li>J'ai cherché à impressionner les autres au lieu d'être moi-même.</li>
+                        <li>Je t'ai fait du mal alors que tu mérites tout l'amour du monde.</li>
+                    </ul>
+                    <p>Je suis désolé. Tellement désolé.</p>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <div class="section-title">✧ Ce que j'ai perdu</div>
+                <div class="section-content">
+                    <p>Depuis que tu es partie :</p>
+                    <ul>
+                        <li>Je pleure presque tous les jours.</li>
+                        <li>Je n'ai plus personne avec qui parler comme avant.</li>
+                        <li>Chaque notification me fait espérer que c'est toi.</li>
+                        <li>Les souvenirs de Bessieux me hantent.</li>
+                    </ul>
+                    <p>Tu étais ma confidente, celle qui me comprenait sans me juger. Maintenant, je me sens seul, abandonné par ceux qui m'ont poussé à faire ces erreurs.</p>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <div class="section-title">✧ Mon amour pour toi</div>
+                <div class="section-content">
+                    <p>Je t'aime. Vraiment.</p>
+                    <ul>
+                        <li>Tu es la seule qui a salué mon père.</li>
+                        <li>La seule avec qui j'ai fait des nuits blanches à discuter.</li>
+                        <li>La seule qui a pris mon cœur complètement.</li>
+                    </ul>
+                    <p>Même si tu es passée à autre chose, moi, je n'y arrive pas. Je ne me vois pas aimer quelqu'un d'autre comme je t'ai aimée.</p>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <div class="section-title">✧ Ma demande (si tu l'acceptes)</div>
+                <div class="section-content">
+                    <p>Je ne veux pas insister si tu as décidé de tourner la page, mais s'il te plaît :</p>
+                    <ul>
+                        <li>Donne-moi une dernière chance.</li>
+                        <li>Laisse-moi te prouver que je peux être différent.</li>
+                        <li>Je suis prêt à tout, même à venir te voir là où tu es.</li>
+                    </ul>
+                    <p>Je te le jure, je ne te décevrai plus.</p>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <div class="section-title">✧ Conclusion</div>
+                <div class="section-content">
+                    <p>Si rien ne change, je respecterai ton choix. Mais sache une chose :</p>
+                    <p><strong>Tu as été l'amour le plus sincère de ma vie, et je ne m'en remettrai peut-être jamais.</strong></p>
+                </div>
+            </div>
+            
+            <div class="signature">Ton Poussin ❤</div>
+            <div class="flowers">✿ ❀ ✿</div>
+        </div>
+    </div>
+
+    <script>
+        const CORRECT_CODE = "Poussin";
+        
+        function checkAccess() {
+            const enteredCode = document.getElementById("access-code").value.trim();
+            const errorElement = document.getElementById("error-message");
+            const contentElement = document.getElementById("protected-content");
+            
+            if (enteredCode.toLowerCase() === CORRECT_CODE.toLowerCase()) {
+                contentElement.style.display = "block";
+                errorElement.textContent = "";
+                document.getElementById("access-form").style.display = "none";
+                activateProtections();
+            } else if (enteredCode === "") {
+                errorElement.textContent = "Je t'écoute... dis-moi comment tu m'appelais";
+            } else {
+                errorElement.textContent = "Ce n'est pas le doux nom que tu me donnais...";
+            }
+        }
+        
+        function activateProtections() {
+            // Bloque le clic droit
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+            
+            // Détection partielle de captures
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'PrintScreen' || (e.ctrlKey && e.key === 'c')) {
+                    alert("❌ Ce message est privé, merci de ne pas le copier.");
+                    document.getElementById("protected-content").style.display = "none";
+                }
+            });
+            
+            // Alerte si changement d'onglet
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    alert("Reviens, ce message est juste pour toi ❤️");
+                }
+            });
+        }
+        
+        document.getElementById("access-code").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                checkAccess();
+            }
+        });
+    </script>
+</body>
+</html>
